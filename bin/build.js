@@ -14,6 +14,8 @@ const ENTRY_POINTS = [
   'src/forms.ts',
   'src/demoModal.ts',
   'src/navbar.ts',
+  'src/videojs.ts',
+  'src/resources.ts',
 ];
 
 // Config dev serving
