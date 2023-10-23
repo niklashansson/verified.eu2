@@ -65,6 +65,9 @@ window.Webflow.push(async () => {
     lastScrollTop = scrolledPixels <= 0 ? 0 : scrolledPixels;
   }
 
+  // run on page load to set navbar state
+  changeNavbarOnScroll();
+
   return () => {
     window.removeEventListener('scroll', throttledScroll);
   };

@@ -112,7 +112,7 @@
     });
   }
 
-  // src/resources.ts
+  // src/resourceSlots.ts
   window.Webflow = window.Webflow || [];
   window.Webflow.push(async () => {
     const listElement = queryElement('[bw-cmsslots-element="list"]');
@@ -181,4 +181,4 @@
     slotItem.isPopulated = true;
   }
 })();
-//# sourceMappingURL=resources.js.map
+//# sourceMappingURL=resourceSlots.js.map

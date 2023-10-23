@@ -104,6 +104,7 @@
       }
       lastScrollTop = scrolledPixels <= 0 ? 0 : scrolledPixels;
     }
+    changeNavbarOnScroll();
     return () => {
       window.removeEventListener("scroll", throttledScroll);
     };
