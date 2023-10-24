@@ -1,8 +1,12 @@
 import { queryElement } from '$utils/queryElement';
 
+import { checkIfNews } from './checkIfCategory';
+import { formatResourceDate } from './formatResourceDate';
 import type { SourceData } from './types';
 
 export function createSourceElement(sourceData: SourceData, templateElement: HTMLDivElement) {
+  formatResourceDate(sourceData.published);
+
   const newElement = templateElement.cloneNode(true) as HTMLDivElement;
 
   const title = queryElement<HTMLDivElement>('[bw-cmsslots-data="title"]', newElement);
@@ -17,8 +21,8 @@ export function createSourceElement(sourceData: SourceData, templateElement: HTM
   title ? (title.textContent = sourceData.title) : '';
   image ? (image.src = sourceData.img) : '';
   type ? (type.textContent = sourceData.category) : '';
-  published && type?.textContent === 'News'
-    ? (published.textContent = sourceData.published)
+  published && checkIfNews(sourceData.category)
+    ? (published.textContent = formatResourceDate(sourceData.published) || '')
     : (published.textContent = '');
   href ? (href.href = sourceData.slug) : '';
 

@@ -14,7 +14,7 @@ window.Webflow.push(async () => {
   if (!closeButtons.length) return;
 
   buttons.forEach((btn) => {
-    btn.setAttribute('href', '');
+    btn.setAttribute('href', '#');
     btn.addEventListener('click', () => {
       openModal();
     });
