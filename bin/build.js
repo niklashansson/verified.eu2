@@ -16,6 +16,7 @@ const ENTRY_POINTS = [
   'src/navbar.ts',
   'src/videojs.ts',
   'src/resources.ts',
+  'src/lottie.ts',
 ];
 
 // Config dev serving

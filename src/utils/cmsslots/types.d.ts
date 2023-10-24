@@ -33,3 +33,8 @@ export type SourceElements = {
   elements: HTMLDivElement[];
   parent: HTMLDivElement;
 };
+
+export type CategoryConstants = {
+  en: string;
+  locale: string;
+};
